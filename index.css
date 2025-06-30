@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+.logo a{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #d63384;
+    margin-left: 1em;
+}
+
+nav {
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.1);
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 60px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+nav a:hover{
+    color: #d63384;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+.sidebar{
+    position:fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.656);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.show {
+    transform: translateX(0%);  
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+
+/* -------------HERO-------------*/
+
+.hero {
+    background: linear-gradient(to bottom, white, #ffe0f0);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 .7rem 1rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    padding: 2em;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.hero img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    border-radius: 10px;
+}
+
+h1{
+    font-size: clamp(2.5rem, 5vw, 4rem); 
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-content p{
+    font-size: clamp(1rem, 2vw, 1.25rem); 
+    line-height: 1.6;
+    margin-bottom: 1em;
+    color: #c2185b; 
+    font-size: 1em;
+}
+
+.button {
+    display: inline-block;
+    width: 7rem;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border: .5px solid rgba(200, 0, 80, 0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    color: #c2185b;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #ffe3f1; 
+    color: #c2185b;
+    box-shadow: 8px 8px 20px rgba(220, 38, 120, 0.2);
+    transform: scale(1.03);
+}
+
+
+
+/* ----------SIGNATURE PASTRIES---------------- */
+
+.signatures {
+    padding: 2em 2em;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffe0f0,#febcde);
+}
+
+.signatures h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #c2185b;
+}
+
+.pastry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.pastries {
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.pastries:hover {
+    transform: translateY(-5px);
+}
+
+.pastries img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.pastries h3 {
+    font-family: 'Playfair Display', serif;
+    color: #d63384;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.pastries p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.button2 {
+    display: inline-block; 
+    width: 8rem;
+    margin-top: 1.5em;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    color: #c2185b;
+    text-align: center;
+    text-decoration: none; 
+    border: .5px solid #d6338451;
+    
+}
+
+.button2:hover {
+    background-color: #ffe3f1; 
+    color: #c2185b;
+    box-shadow: 8px 8px 20px rgba(220, 38, 120, 0.2);
+    transform: scale(1.03);
+}
+
+/* ----------CAKE-OPTIONS ---------------- */
+
+.cake-options {
+    text-align: center;
+    padding: 0 5rem 1rem 5rem;
+    background: linear-gradient(to bottom,#febcde, #ff97cd);
+}
+
+.cake-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.cake-box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: solid rgb(255, 255, 255);
+    background: transparent;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: left;
+}
+
+.cake-box img {
+    width: auto;
+    height: 2rem;
+}
+
+.cake-box h4 {
+    margin-bottom: .5rem;
+}
+
+.cake-box ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.cake-content p{
+    font-family: 'Playfair Display', serif;
+}
+
+.cake-content{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ----------FOOTER---------------- */
+
+.footer {
+    background-color: #ffe0f0;
+    color: #333;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    line-height: 1.5rem;
+}
+
+.footer-content h3 {
+    color: #c2185b;
+    margin-bottom: 1rem;
+}
+
+.footer-content p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: #c2185b;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: #a0134c;
+}
+
+.links a:hover{
+    color: black;
+}
+
+.footer-content i {
+    font-size: 1.8rem;
+    color: #c2185b;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .hero-content {
+        align-items: center;
+        margin-left: 0;
+        padding: 1rem;
+    }
+    .hero img {
+        width: 100%;
+        height: 75%;
+    }
+    .footer-container {
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+    .cake-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+    
+@media (max-width: 600px) {
+
+    .nav-links{
+        margin-right: 0;
+        gap: .5rem;
+    }
+    .cake-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        margin: 0 auto;
+        gap: 0.2rem;
+    }
+    .cake-box {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        min-height: 20px;
+        max-height: 30px;
+        margin-left: -2rem;
+    }
+
+    .cake-box img {
+        display: none;
+    }
+
+    .cake-content h4 {
+        font-size: 1rem;
+    }
+
+    .cake-content p {
+        font-size: 0.85rem;
+    }
+    .logo a {
+    font-size: 1.4rem;
+    padding: 0 0.5rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button {
+    display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar{
+        width: 100%;
+    }
+}
+

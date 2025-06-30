@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maria's Gourmet Pastries</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="designs.css">
+    <link rel="stylesheet" href="pastries.css">
+    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <ul class = "sidebar">
+            <li onclick=hideSidebar()><a href="#"><i class="fas fa-times close-btn"></i></a></li>
+            <li><a href="pastries.html">Pastries</a></li>
+            <li><a href="designs.html">Cake Designs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul>
+            <li class="logo"><a href="index.html">Maria's Gourmet Pastries</a></li>
+            <li class="hideOnMobile"><a href="pastries.html">Pastries</a></li>
+            <li class="hideOnMobile"><a href="designs.html">Cake Designs</a></li>
+            <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+
+
+
+    <section class="pastries-container">
+        <div class="pastries-content">
+            <h2>Sports</h2>
+            <div class="pastries-grid2">
+                <img src="designImgs/soccer.png">
+                <img src="designImgs/football.png">
+                <img src="designImgs/bball.png">
+                <img src="designImgs/baseball.png">
+                <img src="designImgs/hockey.png">
+                <img src="designImgs/golf.png">
+            </div>
+        </div>
+        <div class="pastries-content" id = "images">
+            <h2>More</h2>
+            <div class="pastries-grid2">
+                <img src = "designImgs/spongebog.png">
+                <img src = "designImgs/batman.png">
+                <img src = "designImgs/minecraft.png">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <a href="#"><i class="fa-brands fa-yelp"></i></a>
+            </div>
+
+            <div class="footer-content links">
+                <h3>Pages</h3>
+                <ul class="pages">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pastries.html">Pastries</a></li>
+                    <li><a href="#">Cake Designs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-content">
+                <h3>Maria's Gourmet Pastries</h3>
+                <p>456 Cupcake Blvd, Pastryville, CA 00000</p>
+                <p>(510) 123-4567</p>
+                <p>Sun: 10am – 4pm</p>
+                <p>Mon – Sat: 10am – 7pm</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Maria's Gourmet Pastries • All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
